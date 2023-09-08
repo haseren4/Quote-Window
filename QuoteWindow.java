@@ -5,15 +5,11 @@
 package javaapplication1;
 
 import PersonalRepo.EnhancedFrame;
-import java.awt.Label;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 import javax.swing.JLabel;
 /**
  *
