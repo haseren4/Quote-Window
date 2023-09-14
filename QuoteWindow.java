@@ -10,12 +10,13 @@ import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 /**
  *
  * @author haser
  */
-public class QuoteWindow extends EnhancedFrame {
+public class QuoteWindow extends JFrame {
     static JLabel authorLabel = new JLabel("author");
     static JLabel quoteLabel = new JLabel("quote");
     List<String> quotes = new ArrayList<>();
@@ -26,15 +27,15 @@ public class QuoteWindow extends EnhancedFrame {
         init();
         quotes = q;
         authors = a;
-        newQuote();
-        
+        this.setBounds(0, 0, 350, 300);
+        this.show();
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 newQuote();
             }
-        }, 0, 5000); // 30 seconds
+        }, 0, 30000); // 30 seconds
     }
     private  void init(){
         
@@ -75,7 +76,6 @@ public class QuoteWindow extends EnhancedFrame {
             pack();
     }
     private void newQuote(){
-        System.out.println("New Quote");
         Random r = new Random();
         int i;
         i = Math.abs(r.nextInt() % quotes.size());
