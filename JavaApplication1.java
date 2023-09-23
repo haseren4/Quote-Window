@@ -54,7 +54,7 @@ public class JavaApplication1 {
             System.out.println("Data Loaded Successfully");
             
             System.out.println("Create XML Backup");
-            File file = new File(System.getProperty("user.home"), "quotes.xml");
+            File file = new File( "quotes.xml");
             if(!file.exists()){
                 file.createNewFile();
                 }
